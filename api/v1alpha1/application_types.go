@@ -43,6 +43,10 @@ type ApplicationSpec struct {
 
 	// Description refers to a brief description of the application.
 	Description string `json:"description,omitempty"`
+
+	// SkipGitOpsGeneration defines if the GitOps resources generation/update should be skipped.
+	// Default value is false.
+	SkipGitOpsGeneration bool `json:"skipGitOpsGeneration,omitempty"`
 }
 
 // ApplicationGitRepository defines a git repository for a given Application resource (either appmodel or gitops)
