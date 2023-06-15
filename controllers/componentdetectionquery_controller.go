@@ -81,10 +81,6 @@ const CDQReconcileTimeout = 5 * time.Minute
 func (r *ComponentDetectionQueryReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	log := ctrl.LoggerFrom(ctx)
 
-	// set 5 mins timeout for cdq reconcile
-	ctx, cancel := context.WithTimeout(ctx, CDQReconcileTimeout)
-	defer cancel()
-
 	// Fetch the ComponentDetectionQuery instance
 	var componentDetectionQuery appstudiov1alpha1.ComponentDetectionQuery
 	err := r.Get(ctx, req.NamespacedName, &componentDetectionQuery)
@@ -98,6 +94,15 @@ func (r *ComponentDetectionQueryReconciler) Reconcile(ctx context.Context, req c
 		// Error reading the object - requeue the request.
 		return ctrl.Result{}, err
 	}
+
+	// set 5 mins timeout for cdq reconcile
+	ctx, cancel := context.WithTimeout(ctx, CDQReconcileTimeout)
+	defer func() {
+		err := fmt.Errorf("Context Timeout!!!!")
+		log.Info("Context Timeout!!!!")
+		r.SetCompleteConditionAndUpdateCR(context.Background(), req, &componentDetectionQuery, &componentDetectionQuery, err)
+		cancel()
+	}()
 
 	// If there are no conditions attached to the CDQ, the resource was just created
 	if len(componentDetectionQuery.Status.Conditions) == 0 {
