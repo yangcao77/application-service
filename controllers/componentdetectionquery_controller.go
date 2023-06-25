@@ -96,12 +96,14 @@ func (r *ComponentDetectionQueryReconciler) Reconcile(ctx context.Context, req c
 	}
 
 	// set 5 mins timeout for cdq reconcile
-	ctx, cancel := context.WithTimeout(ctx, CDQReconcileTimeout)
+	ctx, cancel = context.WithTimeout(ctx, CDQReconcileTimeout)
+	defer cancel()
 	defer func() {
-		err := fmt.Errorf("Context Timeout!!!!")
-		log.Info("Context Timeout!!!!")
-		r.SetCompleteConditionAndUpdateCR(context.Background(), req, &componentDetectionQuery, &componentDetectionQuery, err)
-		cancel()
+		if ctx.Err() != nil {
+			err := fmt.Errorf("Context Timeout")
+			log.Info("Context Timeout...")
+			r.SetCompleteConditionAndUpdateCR(context.Background(), req, &componentDetectionQuery, &componentDetectionQuery, err)
+		}
 	}()
 
 	// If there are no conditions attached to the CDQ, the resource was just created
