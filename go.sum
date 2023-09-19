@@ -1137,8 +1137,6 @@ github.com/redhat-appstudio/remote-secret v0.0.0-20230713072146-a6094c712436 h1:
 github.com/redhat-appstudio/remote-secret v0.0.0-20230713072146-a6094c712436/go.mod h1:QlcxNg0q63QFGr9ceI3dH7a7vO6gGh+2TJrbTiMf9DE=
 github.com/redhat-appstudio/service-provider-integration-operator v0.2023.22-0.20230713080056-eae17aa8c172 h1:Zibq2RBTzcoDgZcTfM5k2o1qrKuix3YPtYQ/NuP039Y=
 github.com/redhat-appstudio/service-provider-integration-operator v0.2023.22-0.20230713080056-eae17aa8c172/go.mod h1:FGHbzLSIpXZKFVKKQr1sSrgN3+wBpJw0wTTjTRNNm+k=
-github.com/redhat-developer/alizer/go v0.0.0-20230516215932-135a2bb3fb90 h1:pFKn+Vqg3xXrueGboXYRkmKPJ6ObaVBNbKF1M7NG/mA=
-github.com/redhat-developer/alizer/go v0.0.0-20230516215932-135a2bb3fb90/go.mod h1:y7XToX/Yq1ASZY8hatAkmXJSzEXlHZV8lf59wliUfOw=
 github.com/redhat-developer/gitops-generator v0.0.0-20230801134438-01747a27dcbf h1:uRlhXqcVhbvp9YawKoggQoMLZwRP0/kpdLE3wkzqMuI=
 github.com/redhat-developer/gitops-generator v0.0.0-20230801134438-01747a27dcbf/go.mod h1:pKJez873Y9lZwQAgm99i/y1SmPI2dMd19ID74C+CxpU=
 github.com/rogpeppe/fastuuid v0.0.0-20150106093220-6724a57986af/go.mod h1:XWv6SoW27p1b0cqNHllgS5HIMJraePCO15w5zCzIWYg=
@@ -1264,6 +1262,8 @@ github.com/xeipuuv/gojsonschema v1.2.0 h1:LhYJRs+L4fBtjZUfuSZIKGeVu0QRy8e5Xi7D17
 github.com/xeipuuv/gojsonschema v1.2.0/go.mod h1:anYRn/JVcOK2ZgGU+IjEV4nwlhoK5sQluxsYJ78Id3Y=
 github.com/xiang90/probing v0.0.0-20190116061207-43a291ad63a2/go.mod h1:UETIi67q53MR2AWcXfiuqkDkRtnGDLqkBTpCHuJHxtU=
 github.com/xordataexchange/crypt v0.0.3-0.20170626215501-b2862e3d0a77/go.mod h1:aYKd//L2LvnjZzWKhF00oedf4jCCReLcmhLdhm1A27Q=
+github.com/yangcao77/alizer/go v0.0.0-20230919221748-0f5b0932082f h1:LQaBseZ3GYZuruOt5rzDjN2pOrAqW4AplF8OC0wcfgg=
+github.com/yangcao77/alizer/go v0.0.0-20230919221748-0f5b0932082f/go.mod h1:y7XToX/Yq1ASZY8hatAkmXJSzEXlHZV8lf59wliUfOw=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.32/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=

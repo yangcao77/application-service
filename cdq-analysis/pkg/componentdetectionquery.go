@@ -141,7 +141,7 @@ func CloneAndAnalyze(k K8sInfoClient, namespace, name, context string, cdqInfo *
 	// search the cloned repo for valid dockerfile locations
 	dockerfileBytes, err := FindValidDockerfile(cdqInfo)
 	if err != nil {
-		log.Error(err, fmt.Sprintf("Unable to find from any known devfile locations from %s ", cdqInfo.GitURL))
+		log.Error(err, fmt.Sprintf("Unable to find from any known dockerfile locations from %s ", cdqInfo.GitURL))
 	}
 
 	isDevfilePresent := len(devfileBytes) != 0

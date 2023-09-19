@@ -191,4 +191,6 @@ require (
 
 replace github.com/antlr/antlr4 => github.com/antlr/antlr4 v0.0.0-20211106181442-e4c1a74c66bd
 
+replace github.com/redhat-developer/alizer/go => github.com/yangcao77/alizer/go v0.0.0-20230919221748-0f5b0932082f
+
 replace github.com/redhat-appstudio/application-service/cdq-analysis => ./cdq-analysis
